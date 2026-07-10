@@ -12,6 +12,7 @@ public class App
         
         paymentService.updatePayment(1003, "paid");
         //hello
+       System.out.println("hello");
         
     }
 }
