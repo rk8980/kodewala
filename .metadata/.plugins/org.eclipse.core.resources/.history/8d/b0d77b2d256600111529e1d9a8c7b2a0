@@ -1,0 +1,27 @@
+package com.kodewala.streamapipractice;
+
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class Driver1 {
+
+	public static void main(String[] args) {
+		List<String> brand = Arrays.asList("samsung", "lg", "sony", "apple", "nokia"," micromax","realme");
+		
+		List<String> processBtrand =  brand.stream().map(word -> word.toUpperCase()).collect(Collectors.toList());
+		System.out.println("processed : " + processBtrand);
+		
+		// Task : from a given list can you find the brand starting with 's' and convert to upper case
+		
+		
+		List<String> processBtrand1 = brand.stream().filter(b -> b.startsWith("s")).map(word -> word.toUpperCase()).collect(Collectors.toList());
+		
+		System.out.println("processed : " + processBtrand1);
+		
+		Stream<Object> n = brand.stream().map(w -> w.hashCode());
+		System.out.println(n);
+	}
+
+}

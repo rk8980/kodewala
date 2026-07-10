@@ -1,0 +1,74 @@
+package com.kodewala.threadpractice2;
+
+
+
+class BankAccount1
+{
+	private static int balance = 1000;
+
+	public  static void withdraw(int amount)
+	{
+		System.out.println(Thread.currentThread().getName() + " some other logic ........50 lines......");
+		
+		synchronized (BankAccount1.class) {
+
+			if (balance >= amount) {
+				System.out.println(Thread.currentThread().getName() + " is withdrawing " + amount);
+
+				// simulate delay
+				try {
+					Thread.sleep(100);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+
+				balance = balance - amount;
+
+				System.out.println(Thread.currentThread().getName() + " completed withdrawal. Balance = " + balance);
+			} else {
+				System.out.println(Thread.currentThread().getName() + " Insufficient Balance");
+			}
+		}
+	}
+
+	public int getBalance()
+	{
+		return balance;
+	}
+}
+
+class Customer extends Thread
+{
+	private BankAccount account;
+	private int amount;
+
+	public Customer(BankAccount account, int amount)
+	{
+		this.account = account;
+		this.amount = amount;
+	}
+
+	@Override
+	public void run()
+	{
+		BankAccount1.withdraw(amount);
+	}
+}
+
+public class Driver1
+{
+	public static void main(String[] args) throws InterruptedException
+	{
+		BankAccount account = new BankAccount();
+
+		Customer c1 = new Customer(account, 700);
+		Customer c2 = new Customer(account, 700);
+
+
+		c1.start();
+		c2.start();
+		
+		c1.join();
+		c2.join();
+	}
+}

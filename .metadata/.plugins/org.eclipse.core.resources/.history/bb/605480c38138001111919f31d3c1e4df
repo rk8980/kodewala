@@ -1,0 +1,28 @@
+package com.kodewala.oopspractice.inheritance;
+class Person {
+    String name = "Rahul";
+
+    public void display() {
+        System.out.println("Name: " + name);
+    }
+}
+
+class Student extends Person {
+    int rollNo = 101;
+
+    public void show() {
+    	
+        System.out.println("Roll No: " + rollNo);
+        //System.out.println(student.name);
+    }
+}
+
+public class Driver {
+
+	public static void main(String[] args) {
+		Student student = new Student();
+		student.display();
+    }
+	
+
+}

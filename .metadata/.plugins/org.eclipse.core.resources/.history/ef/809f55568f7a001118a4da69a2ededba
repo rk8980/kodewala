@@ -1,0 +1,62 @@
+package com.kodewala;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+public class SalaryCalculationTest {
+
+    SalaryCalculation salaryCalculation;
+
+    @BeforeAll
+    static void setupAll() {
+        System.out.println("Starting Salary Calculation Tests...");
+    }
+
+    @BeforeEach
+    void setup() {
+        System.out.println("Creating SalaryCalculation Object");
+        salaryCalculation = new SalaryCalculation();
+    }
+
+    @Test
+    public void testCalculateSalaryBelow10k() {
+
+        int expected = 9000;
+        int actual = salaryCalculation.calculateSalary(9000);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testCalculateSalaryAbove10k() {
+
+        int expected = 23000;
+        int actual = salaryCalculation.calculateSalary(20000);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testCalculateSalaryLessThan5k() {
+
+        int expected = -1;
+        int actual = salaryCalculation.calculateSalary(4000);
+
+        assertEquals(expected, actual);
+    }
+
+    @AfterEach
+    void cleanup() {
+        System.out.println("Test Completed");
+    }
+
+    @AfterAll
+    static void cleanupAll() {
+        System.out.println("All Salary Calculation Tests Completed.");
+    }
+}

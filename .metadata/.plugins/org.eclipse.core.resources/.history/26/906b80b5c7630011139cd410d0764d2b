@@ -1,0 +1,26 @@
+package com.kodewala.mappractice;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		//Task to store key value 
+		Map<String, String> stateAndEmpName= new HashMap<String, String>();
+		
+		empIdAndName.put("Bihar", "Sumit");
+		empIdAndName.put("Jharkhand", "Abhishek");
+		empIdAndName.put(03, "Piyush");
+		empIdAndName.put(04, "Ganpat");
+		empIdAndName.put(05, "Aman");
+		empIdAndName.put(06, "Akash");
+		empIdAndName.put(06, "Ajay");
+		
+		System.out.println(empIdAndName);
+		//System.out.println(empIdAndName.get(02));
+				
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package com.kodewala.exception;
+
+public class FileClosingException {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

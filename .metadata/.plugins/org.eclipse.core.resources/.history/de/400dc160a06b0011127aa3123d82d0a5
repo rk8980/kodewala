@@ -1,0 +1,42 @@
+package com.kodewala.threadpractice;
+
+class MyThread extends Thread
+{
+	public void run()
+	{
+		System.out.println("MyThread.run()... executing the task.." + Thread.currentThread().getName());
+		Payment payment = new Payment();
+		payment.doPayment();
+	}
+}
+
+class Payment
+{
+	void doPayment()
+	{
+		System.out.println("Payment.doPayment()");
+	}
+}
+public class Driver {
+
+	public static void main(String[] args) {
+		System.out.println("Driver.main() Start :"+ Thread.currentThread().getName());
+		
+		MyThread t1 = new MyThread();
+		t1.setName("t1");
+		t1.start();
+		
+		
+		MyThread t2 = new MyThread();
+		t2.setName("t2);
+		t2.start();
+		
+		
+		
+		System.out.println("Driver.main() End "+ Thread.currentThread().getName());
+		 
+		
+
+	}
+
+}

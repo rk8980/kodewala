@@ -1,0 +1,26 @@
+package com.kodewala.threadpractice;
+class MyThread6 implements Runnable
+{
+
+	@Override
+	public void run() { // Running
+		System.out.println("MyThread.run().....attending kodewala clasess---- SARTED at 9 AM");
+		System.out.println("MyThread.run()");
+		System.out.println("MyThread.run()");
+		
+		// T
+		
+	}
+	
+}
+public class Driver3 {
+
+	public static void main(String[] args) {
+		MyThread myThread = new MyThread();
+		Thread t1 = new Thread(myThread);
+		
+		t1.start();
+
+	}
+
+}

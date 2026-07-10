@@ -1,0 +1,42 @@
+package com.kodewala.oopspractice.inheritance;
+
+public class Account {
+	double balance;
+	// constructor 
+	public Account(double balance)
+	{
+		this.balance = balance;
+	}
+	
+	// method to show the balance 
+	public void showBalance()
+	{
+		System.out.println("Account Balance = "+ balance);
+	}
+	
+	
+}
+class SavingAccount extends Account
+{
+	double intrestRate;
+
+	public SavingAccount(double balance, double intrestRate) {
+		super(balance);// calling parent constructor
+		this.intrestRate = intrestRate;
+	}
+	
+	// method to calculate intrest
+	
+	public void calculateIntrest()
+	{
+		double intrest = balance * intrestRate / 100;
+		System.out.println("Intrest earn : "+ intrest);
+	}
+	
+public static void main(String[] args) {
+	SavingAccount savingAccount = new SavingAccount(1000, 15);
+	savingAccount.showBalance();
+	savingAccount.calculateIntrest();
+	
+	}
+}	

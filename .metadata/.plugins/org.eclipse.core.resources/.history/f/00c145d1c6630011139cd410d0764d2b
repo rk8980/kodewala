@@ -1,0 +1,24 @@
+package com.kodewala.mappractice;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		//Task to store key value 
+		Map<Integer, String> empIdAndName = new HashMap<Integer, String>();
+		
+		empIdAndName.put(01, "Sumit");
+		empIdAndName.put(02, "Abhishek");
+		empIdAndName.put(03, "Piyush");
+		empIdAndName.put(04, "Ganpat");
+		empIdAndName.put(05, "Aman");
+		empIdAndName.put(06, "Akash");
+		
+		System.out.println(empIdAndName);
+				
+
+	}
+
+}

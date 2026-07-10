@@ -1,0 +1,24 @@
+package com.kodewala.oopspractice.override;
+
+class FuelCar
+{
+	public void carFunction()
+	{
+		
+	}
+}
+class EvCar
+{
+	public void carFunction()
+	{
+		
+	}
+}
+public class Car {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+}

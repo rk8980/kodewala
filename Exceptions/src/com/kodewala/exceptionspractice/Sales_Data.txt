@@ -1,0 +1,11 @@
+S101,Laptop,Electronics,2,55000,110000,Rahul,Bangalore,2026-05-01
+S102,Mouse,Electronics,5,800,4000,Amit,Bangalore,2026-05-02
+S103,Keyboard,Electronics,3,1500,4500,Priya,Chennai,2026-05-03
+S104,Mobile,Electronics,4,20000,80000,Sneha,Bangalore,2026-05-04
+S105,Headphones,Accessories,6,1200,7200,Rohan,Pune,2026-05-05
+S106,Monitor,Electronics,2,10000,20000,Anjali,Bangalore,2026-05-06
+S107,Printer,Office,1,15000,15000,Vikash,Kolkata,2026-05-07
+S108,Tablet,Electronics,3,18000,54000,Pooja,Bangalore,2026-05-08
+S109,Webcam,Accessories,7,2500,17500,Karan,Jaipur,2026-05-09
+S110,Router,Networking,4,3000,12000,Neha,Bangalore,2026-05-10
+S111,Smart Watch,Electronics,5,7000,35000,Arjun,Bangalore,2026-05-11

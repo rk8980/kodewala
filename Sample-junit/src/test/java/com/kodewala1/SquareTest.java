@@ -1,0 +1,15 @@
+package com.kodewala1;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
+
+public class SquareTest {
+
+    @Test
+    public void testSquare() {
+
+        Square square = new Square();
+
+        assertEquals(25, square.square(5));
+    }
+}

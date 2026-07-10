@@ -1,0 +1,25 @@
+package com.kodewala.exception;
+
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
+public class FileNotFoundPractice {
+
+	public static void main(String[] args) {
+		try
+		{
+			// opening file
+			
+			FileReader fr = new FileReader("C:\\Users3\\USER\\eclipse-workspace\\Arrays\\ExceptionHandling\\abc.txt");
+			
+			System.out.println("File opened succesfully");
+		}
+		catch(FileNotFoundException e)
+		{
+			System.out.println("File not found");
+			e.printStackTrace();
+		}
+
+	}
+
+}

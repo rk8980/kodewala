@@ -1,0 +1,48 @@
+package com.kodewala.oopspractice;
+
+public class ATM 
+{
+	
+	private double balance;
+	private String pin;
+	public ATM(double balance, String pin) // constructor  
+	{
+		this.balance = balance;
+		this.pin = pin;
+	}
+	// method to withdraw
+	public void withdraw(double amountToWithdraw, String enteredPin)
+	{
+		System.out.println("current balance is : "+balance);
+		if(enteredPin.equals(pin) && amountToWithdraw <= balance)
+		{
+			balance = balance - amountToWithdraw;
+			System.out.println("balance post withdraw" + balance);
+		}
+		else
+		{
+			System.out.println("Insufficient balance or incorrect pin");
+		}
+	}
+	// method to deposit money
+	public void deposit(double amountToDeposit, String enteredPin)
+	{
+		if(enteredPin.equals(pin))
+		{
+			balance = balance + amountToDeposit;
+			System.out.println("deposit : "+amountToDeposit);
+			
+			System.out.println("After deposited new balance is : "+balance);
+		}
+		else
+		{
+			System.out.println(" Error incorrect pin");
+		}
+	}
+	public static void main(String[] args) {
+		ATM atm = new ATM(1000, "1234");
+		atm.withdraw(200, "1234");
+
+	}
+
+}

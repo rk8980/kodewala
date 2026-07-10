@@ -1,0 +1,26 @@
+package com.kodewala.oopspractice.override;
+class PaymentSystem1
+{
+	 void  doPayment(String accNo, int amount, String note)
+	{
+		System.out.println("PaymentSystem.dopayment()....");
+	}	
+}
+
+class UPI extends PaymentSystem1
+{
+	@Override
+	 void doPayment(String accNo, int amount, String note)
+	{
+		System.out.println("UPI.dopayment...");
+	}
+}
+public class Driver1 {
+	
+
+	public static void main(String[] args) {
+		UPI upi = new UPI();
+		upi.doPayment("12345", 5000, "bill");
+	}
+
+}

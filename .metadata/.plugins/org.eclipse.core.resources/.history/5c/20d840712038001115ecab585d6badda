@@ -1,0 +1,50 @@
+package com.kodewala.oopspractice;
+
+public class BankAccount {
+	private double balance; //private data member
+	
+	public BankAccount(double balance) // constructor
+	{
+		this.balance = balance;
+	}
+	public double getBalance() // getter method to view balance (read only)
+	{
+		
+		return balance;
+	}
+	public void deposit(double amount) // method to deposit money
+	
+	{
+		if(amount > 0)
+		{
+			balance = balance + amount;
+			System.out.println("Deposited : "+amount);
+		}
+		else
+		{
+			System.out.println("Invalid amount");
+		}
+	}
+	public void withdraw(double amount)// method to withdraw money
+	{
+		if(amount > 0 && amount <= balance)
+		{
+			balance = balance - amount;
+			System.out.println("Withdrawn : "+amount);
+		}
+		else
+		{
+			System.out.println("Insufficient funds or invalid amount!");
+		}
+	}
+
+	public static void main(String[] args) {
+		BankAccount acc = new BankAccount(1000);
+		System.out.println(acc.balance );
+		acc.deposit(500);
+		acc.withdraw(800);
+		System.out.println("final balance : "+acc.getBalance());
+		
+	}
+
+}

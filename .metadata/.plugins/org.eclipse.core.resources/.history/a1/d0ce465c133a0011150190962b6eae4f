@@ -1,0 +1,30 @@
+package com.kodewala.oopspractice.override;
+class Car
+{
+	 public void refuel() {
+	        System.out.println("Car is refueling...");
+	    }
+}
+class FuelCar extends Car {
+    public void refuel() {
+        System.out.println("Fuel Car is filling petrol/diesel...");
+    }
+}
+class EVCar extends Car {
+    public void refuel() {
+        System.out.println("EV Car is charging battery...");
+    }
+}
+
+public class CarApp {
+
+	public static void main(String[] args) {
+		 Car c1 = new FuelCar();
+	        c1.refuel();  
+
+	        Car c2 = new EVCar();
+	        c2.refuel();   
+
+	}
+
+}

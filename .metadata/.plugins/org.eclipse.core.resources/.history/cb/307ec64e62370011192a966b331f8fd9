@@ -1,0 +1,16 @@
+package com.kodewala.stringbuilderexp;
+
+public class StringManipulationDemo {
+
+	public static void main(String[] args) {
+		StringBuffer sb = new StringBuffer("Hello");
+		
+		// append
+		sb.append(" World");
+		System.out.println("after append : "+sb);
+		
+		sb.insert(10, "Welcome to kodewala");
+
+	}
+
+}

@@ -1,0 +1,27 @@
+package com.kodewala.threadpractice;
+
+class MyThrerad7 implements Runnable
+{
+
+	@Override
+	public void run() { // running
+		
+		
+		
+		
+	}
+	
+}
+public class Driver6 {
+
+	public static void main(String[] args) {
+		MyThrerad7 myThread = new MyThrerad7();
+		Thread t1 = new Thread(myThread);
+		t1.setName("myThread");
+		
+		Thread t2 = new Thread(myThread);
+		t2.setName("thread2");
+
+	}
+
+}

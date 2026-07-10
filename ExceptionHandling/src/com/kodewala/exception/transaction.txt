@@ -1,0 +1,5 @@
+1001,Rahul,50000,10000,rahul@gmail.com
+1002,Aman,2000,5000,aman@gmail.com
+1003,Rohit,abc,2000,rohit@gmail.com
+1004,Sumit,25000,5000,sumitgmail.com
+1005,Karan,70000,15000,karan@gmail.com

@@ -1,0 +1,16 @@
+package om.kodewala.interfacepractice;
+
+public class Driver {
+
+	public static void main(String[] args) {
+		Hotstar h1 = new Hotstar();
+		h1.signUp();
+		h1.login();
+		h1.subscribe();
+		h1.doWatch();
+		h1.cancelSubscription();
+		h1.unInstall();
+
+	}
+
+}
