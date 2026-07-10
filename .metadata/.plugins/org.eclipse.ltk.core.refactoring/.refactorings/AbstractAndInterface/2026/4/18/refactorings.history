@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename compilation unit &apos;om.kodewala.interfacepractice.StreamingService.java&apos; to &apos;IStreamingService.java&apos;&#x0D;&#x0A;- Original project: &apos;AbstractAndInterface&apos;&#x0D;&#x0A;- Original element: &apos;om.kodewala.interfacepractice.StreamingService.java&apos;&#x0D;&#x0A;- Renamed element: &apos;om.kodewala.interfacepractice.IStreamingService.java&apos;" description="Rename compilation unit &apos;StreamingService.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;om.kodewala.interfacepractice{StreamingService.java" name="IStreamingService.java" references="false" stamp="1777349338646" version="1.0"/>
-</session>

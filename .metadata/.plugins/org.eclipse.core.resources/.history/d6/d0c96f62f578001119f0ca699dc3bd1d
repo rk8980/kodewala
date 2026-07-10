@@ -1,8 +1,0 @@
-package com.kodewala.practicemaven;
-
-public class Driver {
-	public static void main(String[] args) {
-		
-
-	}
-}

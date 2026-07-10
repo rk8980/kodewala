@@ -1,0 +1,13 @@
+# Eclipse workspace
+.metadata/
+
+# Maven
+target/
+
+# Eclipse files
+.settings/
+.project
+.classpath
+
+# Logs
+*.log
