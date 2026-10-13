@@ -14,4 +14,4 @@ public class InvoiceServiceApplication {
 		SpringApplication.run(InvoiceServiceApplication.class, args);
 	}
 
-}
+}    
