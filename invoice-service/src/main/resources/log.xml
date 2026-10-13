@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration status="WARN">
+
+    <Properties>
+        <Property name="LOG_PATTERN">
+            %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n
+        </Property>
+
+        <Property name="LOG_FILE">
+            logs/invoice-service.log
+        </Property>
+    </Properties>
+
+    <Appenders>
+
+        <!-- Console Log -->
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+
+        <!-- File Log -->
+        <RollingFile
+                name="File"
+                fileName="${LOG_FILE}"
+                filePattern="logs/invoice-service-%d{yyyy-MM-dd}-%i.log.gz">
+
+            <PatternLayout>
+                <Pattern>${LOG_PATTERN}</Pattern>
+            </PatternLayout>
+
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+                <SizeBasedTriggeringPolicy size="10 MB"/>
+            </Policies>
+
+            <DefaultRolloverStrategy max="10"/>
+
+        </RollingFile>
+
+    </Appenders>
+
+    <Loggers>
+
+        <!-- Invoice Service Logs -->
+        <Logger name="com.zepto.invoice" level="DEBUG" additivity="false">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="File"/>
+        </Logger>
+
+        <!-- Hibernate SQL -->
+        <Logger name="org.hibernate.SQL" level="DEBUG"/>
+
+        <!-- Hibernate Parameters -->
+        <Logger name="org.hibernate.orm.jdbc.bind" level="TRACE"/>
+
+        <!-- Spring Framework -->
+        <Logger name="org.springframework" level="INFO"/>
+
+        <!-- Root Logger -->
+        <Root level="INFO">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="File"/>
+        </Root>
+
+    </Loggers>
+
+</Configuration>
