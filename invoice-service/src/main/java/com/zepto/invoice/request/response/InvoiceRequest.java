@@ -5,6 +5,7 @@ public class InvoiceRequest {
 	String cutomerName;
 	int gst;
 	String status;
+	Long categoryId;
 
 	public String getCutomerName() {
 		return cutomerName;
@@ -28,6 +29,14 @@ public class InvoiceRequest {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+	
+	public Long getCategoryId() {
+	    return categoryId;
+	}
+
+	public void setCategoryId(Long categoryId) {
+	    this.categoryId = categoryId;
 	}
 
 }

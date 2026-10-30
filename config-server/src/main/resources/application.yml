@@ -9,4 +9,4 @@ spring:
           uri: https://github.com/rk8980/kodewala
           default-label: main
           clone-on-start: true 
-          search-paths: config-server/central-configs
+          search-paths: config-server/central-config

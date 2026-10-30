@@ -8,8 +8,10 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import com.zepto.invoice.client.CategoryClient;
 import com.zepto.invoice.entity.InvoiceEntity;
 import com.zepto.invoice.repository.InvoiceRespository;
+import com.zepto.invoice.request.response.CategoryResponse;
 import com.zepto.invoice.request.response.InvoiceRequest;
 import com.zepto.invoice.request.response.InvoiceResponse;
 
@@ -20,11 +22,27 @@ public class InvoiceService {
             LogManager.getLogger(InvoiceService.class);
 
     @Autowired
-    InvoiceRespository invoiceRespository;
+    private InvoiceRespository invoiceRespository;
 
+    @Autowired
+    private CategoryClient categoryClient;
+    
+    public CategoryResponse testCategory(Long id)
+    {
+    	return categoryClient.getCategoryById(id);
+    }
+
+    // Create Invoice
     public InvoiceResponse createInvoice(InvoiceRequest invoiceRequest) {
 
         logger.info("Creating new invoice");
+
+        // Call the category microservice using OpenFeign
+        CategoryResponse categoryResponse =
+                categoryClient.getCategoryById(
+                        invoiceRequest.getCategoryId());
+
+        logger.info("Category service called successfully");
 
         InvoiceEntity entity = new InvoiceEntity();
 
